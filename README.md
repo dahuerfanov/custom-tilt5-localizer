@@ -8,11 +8,22 @@ Average FPS using webcam was 183.698 is latest run. This includes drawing detect
 
 ### Instructions
 
-1. `cd aruco`
-2. `cmake .`
-3. `make`
-4. Create an aruco marker running `./Create_marker.o`
-5. Start detecting arucos in you camera with `./Aruco.o`.
-6. Stop with `Esc` and read the average from terminal.
+#### Build the render library
+1. `cd custom-tilt5-localizer/renderLib`
+2. `mkdir build`
+3. `cd build`
+4. `cmake ..`
+5. `make`
 
-By default `Aruco.o` tries to use input 1 (in my case virtual OBS camera). Change this to 0 in `main.cpp` if you want to use your webcam.
+#### Build the project
+
+1. `cd custom-tilt5-localizer`
+2. `mkdir build`
+3. `cd build`
+4. `cmake ..`
+5. `make`
+6. Create an aruco marker running `./Create_marker.o`
+7. Start detecting arucos in you camera with `./Aruco.o`.
+8. Stop with `Esc` and read the average from terminal.
+
+By default `Aruco.o` tries to use input 0 (webcam). Change this to 1 in `main.cpp` if you want to use another camera.
