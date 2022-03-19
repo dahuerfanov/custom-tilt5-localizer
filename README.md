@@ -27,3 +27,5 @@ Average FPS using webcam was 183.698 is latest run. This includes drawing detect
 8. Stop with `Esc` and read the average from terminal.
 
 By default `Aruco.o` tries to use input 0 (webcam). Change this to 1 in `main.cpp` if you want to use another camera.
+
+Currently projections of points outside the aruco plane are not correct due to default camera intrinsics. A camera calibration procedure should be added.
